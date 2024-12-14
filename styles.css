@@ -1,0 +1,185 @@
+/* Estilo geral para o corpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Layout da calculadora */
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Estilo dos botões da calculadora */
+.calculator button {
+    padding: 20px;
+    font-size: 22px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calculator button:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.calculator button:active {
+    background-color: #003f7d;
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do campo de resultado */
+#output {
+    grid-column: span 4;
+    padding: 20px;
+    background-color: #f0f0f5;
+    font-size: 36px;
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Botões avançados */
+.advanced {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.advanced button {
+    padding: 15px;
+    font-size: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s ease, box-shadow 0.3s;
+}
+
+.advanced button:hover {
+    background-color: #218838;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.advanced button:active {
+    background-color: #1e7e34;
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de gráficos - removido, mas mantendo o layout limpo */
+.graph-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.graph-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+canvas {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin-top: 20px;
+}
+
+/* Histórico de cálculos */
+.history {
+    margin-top: 30px;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.history h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.history li {
+    font-size: 16px;
+    padding: 8px;
+    margin: 5px 0;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+.history li:last-child {
+    border-bottom: none;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .calculator {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .advanced {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graph-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
